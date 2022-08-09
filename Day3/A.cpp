@@ -7,10 +7,11 @@
   A { c: 2, a: 2, b: 3 }
 
   c1 = A[0].first
-  c2 = null
+  c2 = A[0].first
   left = 0, right = 0, best_left = 0, best_right = 0
 
   for i:=1 to A.size do
+    if (A[i] != c1 && c2 == c1) c2 = c1;
     if (A[i].first == c1) {
       right++;
     }
